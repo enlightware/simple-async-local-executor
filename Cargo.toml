@@ -1,0 +1,21 @@
+[package]
+name = "simple-async-local-executor"
+version = "0.1.0"
+authors = ["Stéphane Magnenat <stephane.magnenat@enlightware.ch>"]
+edition = "2018"
+license = "MIT OR Apache-2.0"
+description = "A single-threaded polling-based executor suitable for use in games, embedded systems or WASM"
+repository = "https://github.com/enlightware/simple-async-local-executor"
+homepage = "https://github.com/enlightware/simple-async-local-executor"
+readme = "README.md"
+keywords = ["executor", "async", "single-threaded"]
+categories = ["asynchronous", "game-development", "wasm"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+default = ["futures"]
+
+[dependencies]
+slab = "0.4.3"
+futures = { version = "0.3", optional = true }

@@ -1,0 +1,42 @@
+# simple async local executor
+
+[![Crates.io][crates-badge]][crates-url]
+
+[crates-badge]: https://img.shields.io/crates/v/simple-async-local-executor
+[crates-url]: https://crates.io/crates/simple-async-local-executor
+
+An [Enlightware® software](https://enlightware.ch).
+
+## Overview
+
+A single-threaded polling-based executor suitable for use in games, embedded systems or WASM.
+This executor can be useful when the number of tasks is small or if a small percentage is blocked.
+Being polling-based, in the general case it trades off efficiency for simplicity and does not require any concurrency primitives such as `Arc`, etc.
+
+## Usage
+
+To use this crate, first add this to your `Cargo.toml`:
+
+```toml
+[dependencies]
+simple-async-local-executor = "0.1.0"
+```
+
+Then, see the [documentation](https://docs.rs/simple-async-local-executor) for more details.
+
+## License
+
+Licensed under either of
+
+ * Apache License, Version 2.0
+   ([LICENSE-APACHE](LICENSE-APACHE) or http://www.apache.org/licenses/LICENSE-2.0)
+ * MIT license
+   ([LICENSE-MIT](LICENSE-MIT) or http://opensource.org/licenses/MIT)
+
+at your option.
+
+## Contribution
+
+Unless you explicitly state otherwise, any contribution intentionally submitted
+for inclusion in this project by you, as defined in the Apache-2.0 license,
+shall be dual licensed as above, without any additional terms or conditions.
