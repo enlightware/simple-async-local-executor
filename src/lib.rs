@@ -16,12 +16,12 @@
 //! let executor = Executor::default();
 //! let events = [executor.create_event_handle(), executor.create_event_handle()];
 //!
-//! async fn wait_event(events: [EventHandle; 2], executor: Executor) {
+//! async fn wait_events(events: [EventHandle; 2], executor: Executor) {
 //!     executor.event(&events[0]).await;
 //!     executor.event(&events[1]).await;
 //! }
 //!
-//! executor.spawn(wait_event(events.clone(), executor.clone()));
+//! executor.spawn(wait_events(events.clone(), executor.clone()));
 //! assert_eq!(executor.step(), true);
 //! assert_eq!(executor.step(), true);
 //! executor.notify_event(&events[0]);
@@ -267,7 +267,7 @@ mod tests {
             executor.create_event_handle(),
         ];
 
-        async fn wait_event(events: [EventHandle; 2], executor: Executor) {
+        async fn wait_events(events: [EventHandle; 2], executor: Executor) {
             println!("before awaits");
             executor.event(&events[0]).await;
             println!("between awaits");
@@ -275,7 +275,7 @@ mod tests {
             println!("after awaits");
         }
 
-        executor.spawn(wait_event(events.clone(), executor.clone()));
+        executor.spawn(wait_events(events.clone(), executor.clone()));
         println!("spawned");
         assert_eq!(executor.step(), true);
         assert_eq!(executor.inner.task_queue.borrow().len(), 1);

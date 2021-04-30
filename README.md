@@ -30,6 +30,9 @@ simple-async-local-executor = "0.1.0"
 
 Then, see the [documentation](https://docs.rs/simple-async-local-executor) for more details.
 
+This crate depends by default on `futures-0.3` to provide the `FusedFuture` trait.
+If you do not need that, you can disable the `futures` feature and avoid that dependency.
+
 ## License
 
 Licensed under either of
