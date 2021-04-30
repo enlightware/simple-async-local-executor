@@ -1,9 +1,12 @@
 # simple async local executor
 
 [![Crates.io][crates-badge]][crates-url]
+[![Build Status][ci-badge]][ci-url]
 
 [crates-badge]: https://img.shields.io/crates/v/simple-async-local-executor
 [crates-url]: https://crates.io/crates/simple-async-local-executor
+[ci-badge]: https://github.com/enlightware/simple-async-local-executor/actions/workflows/ci.yml/badge.svg
+[ci-url]: https://github.com/enlightware/simple-async-local-executor/actions
 
 An [Enlightware® software](https://enlightware.ch).
 
