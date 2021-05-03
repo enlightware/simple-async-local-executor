@@ -33,6 +33,12 @@ Then, see the [documentation](https://docs.rs/simple-async-local-executor) for m
 This crate depends by default on `futures-0.3` to provide the `FusedFuture` trait.
 If you do not need that, you can disable the `futures` feature and avoid that dependency.
 
+## Examples
+
+Beside documentation and unit tests, the following examples are provided:
+
+ * [`examples/game-units.rs`](examples/game-units.rs): use of async to implement unit behaviours in a friendly way
+
 ## License
 
 Licensed under either of
